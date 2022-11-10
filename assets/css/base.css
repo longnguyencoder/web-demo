@@ -1,0 +1,63 @@
+/* css thanh phan cau hinh chung */
+:root{
+    --while-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+
+}
+*{
+    box-sizing: inherit;
+}
+html{
+    margin: 0px;
+    /* font-size: 62.5%; */
+    line-height: 1.6rem;
+    box-sizing: border-box;
+    /* line-height là chiều cao mặt định */
+}
+/*  với 62.5 % thì 1 rem =10px*/
+.grip{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.grip__full-width{
+    width: 100%;
+}
+.grip__row{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* grip__row này dùng để khi muốn các item nằm trên một hàng ngang và khi đầy sẽ xuống dòng (wrap)*/
+/* animation */
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+}
+.modal__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    /* z index the hien vi tri nao z index lon hon thi nó được chồng lên layout */
+}
+.modal__body{
+    position: relative;
+    width: 440px;
+    height: 460px;
+    background-color: #fff;
+    margin: auto;
+    z-index: 2;
+}
